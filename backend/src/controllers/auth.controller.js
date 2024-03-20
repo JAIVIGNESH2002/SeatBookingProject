@@ -21,7 +21,7 @@ exports.signin = (req, res) => {
           if (!data) {
             return res.status(400).json({
                 status:"Failure",
-                message:"No email id found"
+                message:"No user is associated with the given mail id!"
             });
           } else {
             var hashpass_db=data.password;
@@ -38,7 +38,7 @@ exports.signin = (req, res) => {
             else{
                 return res.status(400).json({
                     status:"Failure",
-                    message: "Email and password does not match",
+                    message: "Incorrect password",
                 });
             }
           }

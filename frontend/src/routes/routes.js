@@ -35,6 +35,7 @@ import {store} from '../store/store';
 
 import {getAccessLevel} from "../utils/getAccessLevel.js";
 import { useState } from "react";
+import AdminLayouts from "../components/Admin/AdminLayouts/AdminLayouts.jsx";
 
 export const routes = [
   {
@@ -68,6 +69,14 @@ export const routes = [
         component: (props) => {
           console.log("Props from routes : "+JSON.stringify(props));
           return props.isAuthenticated ? <Home /> : <Redirect to="/auth/login" />}
+          ,
+      },
+      {
+        path: "/adminlayouts",
+        exact: true,
+        component: (props) => {
+          console.log("Props from routes : "+JSON.stringify(props));
+          return props.isAuthenticated ? <AdminLayouts /> : <Redirect to="/auth/login" />}
           ,
       },
       {

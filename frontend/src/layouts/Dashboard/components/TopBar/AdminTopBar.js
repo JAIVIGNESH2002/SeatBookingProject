@@ -8,8 +8,9 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import EventIcon from '@material-ui/icons/Event';
 import BookIcon from '@material-ui/icons/Book';
 import HomeIcon from '@material-ui/icons/Home';
+import MapIcon from '@material-ui/icons/Map';
 import { useSelector } from "react-redux";
-import veraltoLogo from "./Veralto-logo.png"; // Import the image
+import veraltoLogo from "./workseat.png"; // Import the image
  
 import { getAccessLevel } from "../../../../utils/getAccessLevel";
  
@@ -22,8 +23,8 @@ const useStyles = makeStyles({
         flexGrow: 1,
     },
     logo: {
-        width: 100,
-        height: "auto",
+        width: 32,
+        height:32,
         marginRight: 0,
         position: "relative",
         top: -1,
@@ -74,7 +75,7 @@ function AdminTopBar(props) {
                 <IconButton color="inherit" component={Link} to="/">
                     <img src={veraltoLogo} alt="Veralto Logo" className={classes.logo} /> {/* Add the image */}
                 </IconButton>
-                <Typography variant="h5" color="inherit" style={{ paddingLeft: '10px', fontSize: '20px' }}>Book Your Seat</Typography>
+                <Typography variant="h5" color="inherit" style={{ paddingLeft: '10px', fontSize: '20px' }}>Seat booking application for hybrid work culture</Typography>
                 <div className={classes.flexGrow} />
                 <Menu open={Boolean(anchorEl)} onClose={handleMenuClose} anchorEl={anchorEl}>
                     <MenuItem><Link to="/userprofile" className={classes.userprofile}>Profile</Link></MenuItem>
@@ -99,6 +100,11 @@ function AdminTopBar(props) {
                     <Tooltip title="Manage FOW" arrow classes={{ tooltip: classes.tooltip, arrow: classes.arrow }}>
                         <IconButton color="inherit" component={Link} to="/adminmanagebooking">
                             <EventIcon />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Manage seatlayouts" arrow classes={{ tooltip: classes.tooltip, arrow: classes.arrow }}>
+                        <IconButton color="inherit" component={Link} to="/adminlayouts">
+                            <MapIcon />
                         </IconButton>
                     </Tooltip>
                     <IconButton onClick={handleMenuOpen}>

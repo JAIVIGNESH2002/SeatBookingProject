@@ -9,15 +9,13 @@ import { Page } from "../Page";
  
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundImage:`url(https://i.ibb.co/3CZv0S1/purple-Petal.jpg)`,
+    backgroundImage:`url(https://i.ibb.co/5v4HWCr/office-bck3.jpg)`,
     height: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     padding: theme.spacing(6, 2),
-    // backgroundImage: `url(${backgroundImage})`, // Set the background image
-    backgroundSize: "cover", // Ensure the image covers the entire container
-    // zIndex:0
+    backgroundSize: "cover", 
   },
   loginForm: {
     marginTop: theme.spacing(3),
@@ -26,7 +24,15 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
   card: {
-    backgroundColor:"#FEFCFF",
+    // backgroundColor:"#FEFCFF",
+    // borderRadius: '10px', // Rounded corners
+    // border: '1px solid rgba( 255, 255, 255, 0.18 )', // White border with transparency
+    // padding: theme.spacing(2), // Adjust padding as needed
+    // margin: theme.spacing(2), // Add some margin for spacing
+
+    background: 'rgba(255, 255, 255, 0.5)', // Transparent white background
+    boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )', // Box shadow for glassy effect
+    backdropFilter: 'blur(10px)', // Blur effect for glassy effect
     borderRadius: '10px', // Rounded corners
     border: '1px solid rgba( 255, 255, 255, 0.18 )', // White border with transparency
     padding: theme.spacing(2), // Adjust padding as needed
@@ -40,7 +46,7 @@ function Login() {
   const auth = useSelector((state) => state.auth);
  
   return (
-    <Page title="Book Your Seat" className={classes.root}>
+    <Page title="Seat booking application for hybrid work culture" className={classes.root}>
       <Card className={classes.card}>
         <CardContent >
           <Typography gutterBottom variant="h3">

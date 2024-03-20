@@ -1,0 +1,32 @@
+.seat-layout-container {
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .seat-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .seat_icon{
+    height: 35px;
+    width: 35px;
+    margin-right: 15px;
+    margin-top: 8px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .seat-placeholder {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    margin: 0 5px; /* Adjust margin for spacing */
+  }
+  
